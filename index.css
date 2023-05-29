@@ -1,0 +1,289 @@
+@import "assets/fonts/ProximaNova/ProximaNova.css";
+@import "assets/fonts/Roboto/Roboto.css";
+
+:root {
+	--color-white: #FFFFFF;
+	--color-gray-100: #f6f8fd;
+	--color-gray-200: #eff2f9;
+	--color-gray-300: #d7deec;
+	--color-gray-500: #bec4d3;
+	--color-gray-700: #8d93a3;
+	--color-gray-800: #646779;
+	--color-gray-900: #323240;
+	--color-blue-100: #d9e5fd;
+	--color-blue-200: #b3c6ff;
+	--color-blue-300: #748bff;
+	--color-blue-500: #4747fc;
+	--color-blue-700: #2d2de8;
+	--color-blue-800: #1128bd;
+	--color-blue-900: #00178b;
+	--color-cyan-100: #deffff;
+	--color-cyan-200: #bfffff;
+	--color-cyan-300: #87efff;
+	--color-cyan-500: #47d8fc;
+	--color-cyan-700: #2cc2e6;
+	--color-cyan-800: #00a6c9;
+	--color-cyan-900: #007890;
+	--color-magenta-100: #ffe8fc;
+	--color-magenta-200: #ffbbf4;
+	--color-magenta-300: #ff71ee;
+	--color-magenta-500: #f834bb;
+	--color-magenta-700: #e22d88;
+	--color-magenta-800: #d41e5b;
+	--color-magenta-900: #a41646;
+	--color-green-100: #dafbe9;
+	--color-green-300: #69ffa1;
+	--color-green-500: #1cdb71;
+	--color-green-600: #1cb460;
+	--color-green-700: #068641;
+	--color-green-900: #025834;
+	--color-yellow-100: #fff9bd;
+	--color-yellow-300: #ffe851;
+	--color-yellow-500: #ffcd00;
+	--color-yellow-700: #c78b00;
+	--color-yellow-900: #834600;
+	--color-red-100: #ff9284;
+	--color-red-300: #ff9284;
+	--color-red-500: #f54b3c;
+	--color-red-600: #d82617;
+	--color-red-700: #bb0003;
+	--color-red-900: #850002;
+	--blue-gradient: linear-gradient(189deg, var(--color-cyan-500), var(--color-blue-500));
+	--magenta-gradient: linear-gradient(189deg, var(--color-magenta-500), var(--color-magenta-800));
+
+	--xxl: 5rem;
+	--xl: 4rem;
+	--l: 3rem;
+	--m: 2rem;
+	--s: 1rem;
+	--xs: .5rem;
+	--xxs: .25rem;
+
+	--text-size-small: .875rem;
+	--text-size-xsmall: .75rem;
+	--text-size-regular: 1rem;
+	--text-size-large: 1.125rem;
+	--text-size-xlarge: 1.75rem;
+	--text-size-xxlarge: 2rem;
+	--text-size-huge: 3.5rem;
+
+	--text-weight-bold: 700;
+	--text-weight-regular: 500;
+
+	--shadow: 0 4px 0.75rem 0 rgba(40,40,114,.03), 0 2px 0.25rem 0 rgba(40,40,114,.05);
+	--shadow-large: 0 4px 1.5rem 0 rgba(40,40,114,.03), 0 2px 0.5rem 0 rgba(40,40,114,.05);
+	--shadow-tooltip: 0 4px 0.75rem 0 rgba(40,40,114,.06), 0 2px 0.25rem 0 rgba(40,40,114,.1);
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+html {
+	font-size: calc(0.44571428571428573rem + 0.4619047619047619vw);
+	line-height: 1.5;
+}
+
+@media screen and (max-width:2550px) {
+	html {
+		font-size: calc(0.44571428571428573rem + 0.4619047619047619vw);
+	}
+}
+
+@media screen and (min-width:2550px) {
+	.container {
+		max-width: 100rem;
+	}
+}
+
+@media screen and (max-width:1920px) {
+	html {
+		font-size: calc(0.7416576964477933rem + 0.21528525296017226vw);
+	}
+}
+
+@media screen and (max-width:991px) {
+	html {
+		font-size: 1rem;
+	}
+}
+
+h1 {
+	line-height: 1.15;
+}
+
+h2 {
+	line-height: 1.25;
+}
+
+h3 {
+	line-height: 1.33;
+}
+
+h4 {
+	line-height: 1.45;
+}
+
+body {
+	font-family: "proxima-nova", "roboto" ,sans-serif;
+	color: var(--color-gray-900);
+	background-color: var(--color-gray-100);
+}
+
+.icon-xsmall {
+	width: 1.33rem;
+	height: 1.33rem;
+}
+
+.icon-small {
+	width: 2rem;
+	height: 2rem;
+}
+
+.icon-medium {
+	width: 3rem;
+	height: 3rem;
+}
+
+.icon-large {
+	width: 3.25rem;
+	height: 3.25rem;
+}
+
+.flex-parent{
+	margin: -1rem;
+}
+
+.flex-container {
+	max-width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.column {
+	padding: var(--s);
+	justify-content: space-around;
+	align-self: stretch;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.column.is-66-percent {
+	max-width: 100%;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 66.666%;
+}
+
+.column.is-50-percent {
+	max-width: 100%;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 50%;
+}
+
+.column.is-25-percent {
+	min-width: 17rem;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 50%;
+}
+
+@media (min-width: 1279px) {
+	.column {
+		justify-content: space-around;
+		align-self: stretch;
+	}
+
+	.column.is-25-percent {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 25%;
+	}
+
+	.column-wrapper.is-header{
+		order: 1;
+	}
+}
+
+.column {
+	padding: var(--s);
+	justify-content: space-around;
+	align-self: stretch;
+}
+
+.column.is-33-percent {
+	display: flex;
+	min-width: 22.5rem;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 33.333%;
+}
+
+.column.is-33-percent.has-children {
+	padding: 0;
+}
+
+.column.is-nested {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 20rem;
+}
+
+.container {
+	max-width: 88rem;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0rem 2rem;
+}
+
+.container.is-header{
+	position: sticky;
+	top: -1px;
+	z-index: 100;
+	background-color: var(--color-gray-100);
+}
+
+.container.is-header::after{
+	content: "";
+	position: absolute;
+	left: 0%;
+	top: auto;
+	right: 0%;
+	bottom: 0%;
+	height: 0.1rem;
+	justify-content: space-between;
+	background-image: linear-gradient(to right, var(--color-gray-100), var(--color-gray-200) 2rem, var(--color-gray-200) calc(100% - 2rem), var(--color-gray-100) 100%);
+	opacity: 1;
+}
+
+.validation-message {
+	display: block;
+	position: absolute;
+	color: var(--color-red-600);
+	padding: var(--xxs) 1.25rem 0px;
+	box-sizing: border-box;
+	font-size: var(--text-size-xsmall);
+}
+
+@media screen and (max-width:768px) {
+	:root{
+		--text-size-large: 1.125rem;
+		--text-size-xlarge: 1.25rem;
+		--text-size-xxlarge: 1.5rem;
+		--text-size-huge: 2	rem;
+	}
+}
