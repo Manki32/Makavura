@@ -1,0 +1,78 @@
+.InputContainer {
+	position: relative;
+	margin-top: var(--xxs);
+}
+
+.InputContainer > input {
+	width: 100%;
+	padding: var(--s);
+	background-color: var(--color-white);
+	border: 1px solid var(--color-gray-300);
+	border-radius: var(--s);
+	box-sizing: border-box;
+	outline: 0px;
+	font-size: var(--text-size-small);
+	box-shadow: 0 0 0px 1000px var(--color-white) inset;
+	transition: all 150ms;
+}
+
+.InputContainer > input::placeholder {
+	color: transparent;
+}
+
+.InputContainer > input:not(:disabled):hover {
+	border-color: var(--color-gray-700);
+}
+
+.InputContainer > input:focus {
+	border-color: var(--color-blue-500);
+	box-shadow: 0 0 0px 1000px var(--color-white) inset, 0 0 0px 1px var(--color-blue-500);
+}
+
+.InputContainer > input:focus + label,
+.InputContainer > input:-webkit-autofill + label,
+.InputContainer > input:not(:placeholder-shown) + label {
+	transform: scale(0.9) translate(0px, -50%);
+	top: -0.125rem;
+	background-color: var(--color-white);
+	font-weight: 600;
+}
+
+.InputContainer > input:focus + label {
+	color: var(--color-blue-500);
+}
+
+.InputContainer > label {
+	position: absolute;
+	top: 50%;
+	left: var(--s);
+	border-radius: var(--xxs);
+	transform: translateY(-50%);
+	transform-origin: 0 0;
+	font-size: var(--text-size-small);
+	color: var(--color-gray-800);
+	padding: 0px 5px;
+	transition: all 150ms;
+	user-select: none;
+}
+
+.InputContainer[invalid="true"] > input,
+.InputContainer[invalid="true"] > input:not(:disabled):hover {
+	border-color: var(--color-red-500);
+}
+
+.InputContainer[invalid="true"] > input:focus {
+	border-color: var(--color-red-500);
+	box-shadow: 0 0 0px 1000px var(--color-white) inset, 0 0 0px 1px var(--color-red-500);
+}
+
+.InputContainer[invalid="true"] > input:focus + label,
+.InputContainer[invalid="true"] > input:not(:placeholder-shown) + label {
+	color: var(--color-red-600);
+}
+
+@media screen and (max-width:768px) {
+	.InputContainer > input {
+		border-radius: .75rem;
+	}
+}

@@ -1,0 +1,31 @@
+.RadioButton {
+    display: inline-block;
+    font-size: 0px;
+}
+
+.RadioButton > label {
+    display: flex;
+    font-size: 14px;
+    padding: 6px 18px;
+    font-weight: 400;
+    outline: 0px;
+    background-color: var(--color-gray-300);
+    border-radius: 5px;
+    color: var(--color-white);
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    transition: background-color 250ms;
+}
+
+.RadioButton > input {
+    position: absolute;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    z-index: -1000;
+}
+
+.RadioButton > input:checked + label {
+    background-color: var(--color-blue-300);
+}

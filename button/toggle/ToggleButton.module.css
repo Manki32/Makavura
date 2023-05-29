@@ -1,0 +1,38 @@
+.ToggleButton > input {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    z-index: -9999;
+}
+
+.ToggleButton > span {
+    position: relative;
+    display: inline-flex;
+    width: 30px;
+    height: 10px;
+    border: 2px solid var(--color-gray-300);
+    border-radius: 10px;
+    align-items: center;
+    transition: 300ms border-color;
+}
+
+.ToggleButton > span::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-gray-300);
+    transform: translateX(-2px);
+    transition: 300ms transform, 300ms background-color;
+}
+
+.ToggleButton > input:checked + span {
+    border-color: var(--color-blue-300);
+}
+
+.ToggleButton > input:checked + span::before {
+    background-color: var(--color-blue-300);
+    transform: translateX(calc(100% - 8px));
+}

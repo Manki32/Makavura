@@ -1,0 +1,25 @@
+.DataTable {
+	width: 100%;
+}
+
+.DataTable > header {
+	padding: 15px 0px;
+	background-color: var(--color-gray-200);
+}
+
+.HeaderColumn {
+	font-weight: 500;
+	color: var(--color-gray-400);
+}
+
+.Row {
+	padding: 15px 0px;
+}
+
+.Row:not(:last-child) {
+	border-bottom: 1px solid var(--color-gray-200);
+}
+
+.RowColumn {
+	font-weight: 300;
+}
